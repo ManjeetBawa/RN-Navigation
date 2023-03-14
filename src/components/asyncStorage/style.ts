@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
-    // backgroundColor: '#66347F',
+    backgroundColor: '#F8CBA6',
 
   },
   textinput: {
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
   },
   bttn: {
     padding: 10,
-    // backgroundColor: '#D27685',
-    backgroundColor: 'cyan',
+    backgroundColor: '#FFE7CC',
+    // backgroundColor: 'cyan',
     margin: 4,
     marginTop: 10,
     borderRadius: 18,

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './style';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import Input from '../input';
 const Async = () => {
   const [name, setName] = useState('');
   const SaveName = async () => {
@@ -16,11 +16,10 @@ const Async = () => {
   };
   return (
     <View style={styles.container}>
-      <TextInput
-        placeholder="Enter your name ....."
-        placeholderTextColor={'white'}
-        style={styles.textinput}
-        onChangeText={value => setName(value)}
+      <Input
+        placeholder="Enter your Name..."
+        placeholderTextColor={'black'}
+        onchangeText={value => setName(value)}
         value={name}
       />
       <TouchableOpacity onPress={SaveName} style={styles.bttn}>
