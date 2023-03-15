@@ -3,6 +3,7 @@ import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './style';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Input from '../input';
+import Button from '../button';
 const Async = () => {
   const [name, setName] = useState('');
   const SaveName = async () => {
@@ -22,12 +23,8 @@ const Async = () => {
         onchangeText={value => setName(value)}
         value={name}
       />
-      <TouchableOpacity onPress={SaveName} style={styles.bttn}>
-        <Text style={styles.alltext}>Save</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={ShowName} style={styles.bttn}>
-        <Text style={styles.alltext}>Show</Text>
-      </TouchableOpacity>
+      <Button onpress={SaveName} title="Save" />
+      <Button onpress={ShowName} title="Show" />
     </View>
   );
 };

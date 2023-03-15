@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {Text, View, StyleSheet, Button, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import styles from './style';
+import Button from '../button';
 interface HeaderProps {}
 
 const DateTimePick = ({}: HeaderProps) => {
@@ -32,13 +33,8 @@ const DateTimePick = ({}: HeaderProps) => {
       <View style={styles.textbox}>
         <Text style={styles.text}>selected Date: {date.toLocaleString()}</Text>
       </View>
-      <TouchableOpacity onPress={showDatepicker} style={styles.bttn}>
-        <Text style={styles.alltext}>Show date picker</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={showTimepicker} style={styles.bttn}>
-        <Text style={styles.alltext}>Show time picker</Text>
-      </TouchableOpacity>
-      
+      <Button onpress={showDatepicker} title="Date Picker" />
+      <Button onpress={showTimepicker} title="Time Picker" />
       {show && (
         <DateTimePicker
           testID="dateTimePicker"

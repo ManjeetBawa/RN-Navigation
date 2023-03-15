@@ -1,40 +1,32 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, TouchableOpacity, Button} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './style';
 import {useNavigation} from '@react-navigation/native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import Button from '../button';
 
 const Welcome = () => {
   const navigator = useNavigation();
   return (
     <View style={styles.container}>
-      {/* <TouchableOpacity
-        onPress={() => {
-          navigator.navigate('Input');
-        }}>
-        <Text style={styles.text}>Go to button</Text>
-      </TouchableOpacity> */}
-      <TouchableOpacity
-        style={styles.bttn}
-        onPress={() => {
+      <Button
+        onpress={() => {
           navigator.navigate('DateTimePick');
-        }}>
-        <Text style={styles.alltext}>DateTimePicker</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.bttn}
-        onPress={() => {
+        }}
+        title="DateTimePick"
+      />
+      <Button
+        onpress={() => {
           navigator.navigate('ImagePick');
-        }}>
-        <Text style={styles.alltext}>ImagePicker</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.bttn}
-        onPress={() => {
+        }}
+        title="ImageCropPicker"
+      />
+      <Button
+        onpress={() => {
           navigator.navigate('Async');
-        }}>
-        <Text style={styles.alltext}>Async example</Text>
-      </TouchableOpacity>
+        }}
+        title="AsyncStorage"
+      />
     </View>
   );
 };
